@@ -105,6 +105,7 @@ body main section .formContainer #buttonContainer .inputSend {
   padding: 5px;
   color-scheme: white;
   border: 0;
+  border-radius: 5px;
 }
 body main section .formContainer #buttonContainer .inputSend:hover {
   transform: scale(1.1);

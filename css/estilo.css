@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(227, 240, 245);
+  height: 100vh;
+  width: 100vw;
+}
+body header {
+  height: 60px;
+  background-color: white;
+  width: 100%;
+}
+body header div {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header div a {
+  font-weight: bold;
+  color: rgb(62, 137, 166);
+  font-size: xx-large;
+  font-family: "Lobster", cursive;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+body main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(227, 240, 245);
+}
+body main section {
+  width: 50%;
+  height: 80%;
+  background-color: white;
+  border-radius: 20px;
+  border-style: dotted;
+  border-width: 4px;
+  border-color: rgb(62, 137, 166);
+}
+body main section h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: xx-large;
+  color: rgb(62, 137, 166);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+body main section .globalContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+body main section .globalContainer .logoContainer {
+  background-color: skyblue;
+  background-size: contain;
+  border-radius: 100%;
+  padding: 2px;
+}
+body main section .globalContainer .logoContainer img {
+  width: 120px;
+}
+body main section .formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 50px;
+}
+body main section .formContainer .div {
+  padding-bottom: 15px;
+}
+body main section .formContainer .div label {
+  font-family: "Quicksand", sans-serif;
+  color: rgb(62, 137, 166);
+  font-weight: bold;
+  display: inline-block;
+  width: 65px;
+}
+body main section .formContainer .div input {
+  border: solid;
+  border-radius: 3px;
+  border-width: 2px;
+  border-color: rgb(62, 137, 166);
+  font-family: "Quicksand", sans-serif;
+  width: 250px;
+}
+body main section .formContainer #buttonContainer {
+  width: 500px;
+}
+body main section .formContainer #buttonContainer .inputSend {
+  width: 55px;
+  background-color: rgb(62, 137, 166);
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  color-scheme: white;
+  border: 0;
+}
+body main section .formContainer #buttonContainer .inputSend:hover {
+  transform: scale(1.1);
+}
+body main section #campoVacio {
+  padding-top: 30px;
+  padding-left: 65px;
+  color: rgb(202, 35, 35);
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  width: 450px;
+}
+body main section .send {
+  padding-left: 260px;
+}
+body footer {
+  background-color: white;
+  height: 60px;
+}
+body footer div {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: small;
+  color: rgb(62, 137, 166);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60px;
+}
+
+/*# sourceMappingURL=estilo.css.map */

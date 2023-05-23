@@ -89,7 +89,18 @@ formulario.onsubmit = (event) => {
         let usuario = { nombreGuardado, celularGuardado, mailGuardado, fechaGuardada, horaGuardada, servicioGuardado }
         localStorage.setItem("usuario", JSON.stringify(usuario))
         formulario.reset()
-        campoVacio = 0
+        campoVacio = 0;
+        let boton = document.getElementById("inputSend")
+        boton.onclick = (() => {
+            Swal.fire(
+                {
+                iconHtml: "<i class='bi bi-send-check-fill'></i>",
+                iconColor: "rgb(62, 137, 166)",
+                title: "Formulario enviado con éxito!",
+                confirmButtonColor: "rgb(62, 137, 166)"
+                }
+              )
+        })
     }
 }
 

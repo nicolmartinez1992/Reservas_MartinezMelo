@@ -99,7 +99,7 @@ formulario.onsubmit = (event) => {
             }
         )
 
-        const formData = new FormData(this);
+        const formData = new FormData(formulario);
         formData.append('service_id', 'service_p494bq7');
         formData.append('template_id', 'template_ivyhyho');
         formData.append('user_id', 'ww5dLyAavRzB_6rb1');

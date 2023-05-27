@@ -94,11 +94,51 @@ formulario.onsubmit = (event) => {
             {
                 title: "Formulario enviado con éxito!",
                 iconHtml: "<i class='bi bi-send-check-fill'></i>",
+                iconColor: "rgb(62, 137, 166)",
                 confirmButtonColor: "rgb(62, 137, 166)"
             }
         )
-    }
+
+        const formData = new FormData(this);
+        formData.append('service_id', 'service_p494bq7');
+        formData.append('template_id', 'template_ivyhyho');
+        formData.append('user_id', 'ww5dLyAavRzB_6rb1');
+
+        fetch('https://api.emailjs.com/api/v1.0/email/send-form', {
+            method: 'POST',
+            body: formData,
+        }).then(function () {
+            console.log('Your mail is sent!');
+        }).catch(function (error) {
+            console.log('Oops... ' + JSON.stringify(error));
+        });
+    };
+    
+    // const datosFormulario = new FormData(formulario);
+
+    // emailjs.sendForm('service_p494bq7', 'template_ivyhyho', '#formulario')
+    //     .then(function () {
+    //         fetch("template_ivyhyho", {
+    //             method: "POST",
+    //             body: datosFormulario
+    //         }).then(function (respuesta) {
+    //             return respuesta.json();
+    //         }).catch(function (error) {
+    //             console.log("ERROR", error);
+    //         });
+    //     }).catch(function (error) {
+    //         console.log("Error al enviar el correo", error);
+    //     });
+
 }
 
+setTimeout(() => {
+    Toastify({
+        text: "Bienvenido a nuestra web! Llena el formulario para agendarte con nosotros!",
+        duration: 4000,
+        // backgroundColor: "rgb(62, 137, 166)",
+        position: "center"
 
+    }).showToast();
 
+})

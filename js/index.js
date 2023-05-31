@@ -88,7 +88,6 @@ formulario.onsubmit = (event) => {
         let servicioGuardado = servicio.value
         let usuario = { nombreGuardado, celularGuardado, mailGuardado, fechaGuardada, horaGuardada, servicioGuardado }
         localStorage.setItem("usuario", JSON.stringify(usuario))
-        formulario.reset()
         campoVacio.innerHTML = "";
         Swal.fire(
             {
@@ -112,33 +111,16 @@ formulario.onsubmit = (event) => {
         }).catch(function (error) {
             console.log('Oops... ' + JSON.stringify(error));
         });
+
+        formulario.reset()
     };
-    
-    // const datosFormulario = new FormData(formulario);
-
-    // emailjs.sendForm('service_p494bq7', 'template_ivyhyho', '#formulario')
-    //     .then(function () {
-    //         fetch("template_ivyhyho", {
-    //             method: "POST",
-    //             body: datosFormulario
-    //         }).then(function (respuesta) {
-    //             return respuesta.json();
-    //         }).catch(function (error) {
-    //             console.log("ERROR", error);
-    //         });
-    //     }).catch(function (error) {
-    //         console.log("Error al enviar el correo", error);
-    //     });
-
 }
 
 setTimeout(() => {
     Toastify({
         text: "Bienvenido a nuestra web! Llena el formulario para agendarte con nosotros!",
         duration: 4000,
-        // backgroundColor: "rgb(62, 137, 166)",
         position: "center"
-
     }).showToast();
 
 })
